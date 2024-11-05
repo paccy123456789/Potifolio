@@ -678,3 +678,281 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.message-icon {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: #05466b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.card {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    background-color: #fff;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 0 20px #0002;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.card .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(5, 70, 107);
+    color: #fff;
+    padding: 0.75rem 1rem;
+}
+
+.card .heading .logo {
+    display: flex;
+    align-items: center;
+}
+
+.card .heading .title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.card .main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.card .content .message {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem;
+}
+
+.card .message.bot .message-content {
+    background-color: #f1f1f1;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.card .message-content p {
+    font-size: 13.5px;
+}
+
+.card .footer {
+    background-color: #f9f9f9;
+    padding: 0.5rem 1rem;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid rgba(5, 70, 107, 0.8);
+    border-radius: 2rem;
+}
+
+#userInput {
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+.icon {
+    cursor: pointer;
+    color: rgba(5, 70, 107, 0.8);
+    font-size: 18px;
+}
+
+.emoji-picker {
+    display: none;
+    position: absolute;
+    bottom: 3.5rem;
+    right: 3.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.emoji-picker span {
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0.2rem;
+}
+/* Add this to your existing CSS */
+
+.emoji-nav {
+    display: flex;
+    align-items: center;
+}
+
+.emoji-picker {
+    display: flex;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+    max-width: 200px;
+    overflow-x: hidden;
+    padding-right: 20px; /* Add space for the arrow */
+}
+
+.emoji-picker span {
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0.2rem;
+}
+
+.emoji-nav i {
+    cursor: pointer;
+    font-size: 20px;
+    color: rgba(5, 70, 107, 0.8);
+}
+/* Add this to your existing CSS */
+
+/* Wrapper for emoji picker and navigation */
+.emoji-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgba(5, 70, 107, 0.8);
+}
+
+/* This is the emoji picker container */
+.emoji-picker {
+    display: flex;
+    gap: 0.2rem;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allow horizontal scroll */
+    padding: 0.5rem;
+    max-width: 180px; /* Adjust width */
+}
+
+.emoji-picker span {
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0.2rem;
+}
+
+/* Flexbox container for the input and emoji navigation arrows */
+.footer .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+/* Style for the input box */
+#userInput {
+    flex-grow: 1;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(5, 70, 107, 0.8);
+}
+
+/* Style for the emoji picker container */
+.emoji-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    cursor: pointer;
+    color: rgba(5, 70, 107, 0.8);
+    font-size: 18px;
+}
+
+.emoji-nav i {
+    font-size: 24px; /* Larger arrows */
+    color: rgba(5, 70, 107, 0.8);
+    cursor: pointer;
+}
+/* Add this to your existing CSS */
+
+/* Make the emoji picker scrollable horizontally */
+.emoji-picker {
+    display: flex;
+    gap: 0.2rem;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 0.5rem;
+    max-width: 100%; /* Make the picker take up the full width */
+}
+
+/* Style the emoji picker spans */
+.emoji-picker span {
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0.2rem;
+}
+
+/* Hide the emoji picker when it is not in focus */
+.hidden {
+    display: none;
+}
+
+/* Input box style */
+#userInput {
+    flex-grow: 1;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(5, 70, 107, 0.8);
+    margin-right: 10px; /* Add space between input and emojis */
+}
+
+/* Align the emoji button and send button */
+.icon {
+    cursor: pointer;
+    color: rgba(5, 70, 107, 0.8);
+    font-size: 18px;
+}
+
+/* Style the emoji button */
+.emoji-picker {
+    margin-top: 5px; /* Space between input and emoji picker */
+}
+
+/* Hide emoji picker when focusing on the input field */
+#userInput:focus ~ .emoji-picker {
+    display: none;
+}
+
