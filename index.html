@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
 
 </head>
 <body>
@@ -315,6 +316,59 @@ Science, and Data analysis.</p>
         <span>Created By <a href="#">Pacifique HAKIZIMANA</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
     </footer>
 
+    <div class="wrapper">
+        <!-- Floating Chat Icon -->
+        <div class="message-icon" onclick="toggleChat()">
+            <i class='bx bx-message'></i>
+        </div>
+
+        <!-- Chat Card -->
+        <div class="card hidden" id="chatCard">
+            <div class="heading">
+                <div class="logo">
+                    <img src="./robot-w.svg" width="20px" alt="">
+                    <h1 class="title">Chatbot</h1>
+                </div>
+                <div class="icon" onclick="toggleChat()"><i class='bx bx-chevron-down'></i></div>
+            </div>
+            <div class="main">
+                <div class="content" id="chatContent">
+                    <!-- Initial Bot Message -->
+                    <div class="message bot">
+                        <div class="user">
+                            <img src="./robot-w.svg" alt="">
+                        </div>
+                        <div class="message-content">
+                            <p>Hello there! How can I assist you today?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="box">
+                        <input type="text" id="userInput" placeholder="Type here..." onkeydown="checkEnter(event)" onfocus="hideEmojiPicker()">
+                        <div class="emoji-picker" id="emojiPicker">
+                            <span onclick="addEmoji('😊')">😊</span>
+                            <span onclick="addEmoji('👍')">👍</span>
+                            <span onclick="addEmoji('❤️')">❤️</span>
+                            <span onclick="addEmoji('😂')">😂</span>
+                            <span onclick="addEmoji('😭')">😭</span>
+                            <span onclick="addEmoji('😎')">😎</span>
+                            <span onclick="addEmoji('😜')">😜</span>
+                            <span onclick="addEmoji('🎉')">🎉</span>
+                            <span onclick="addEmoji('🤔')">🤔</span>
+                            <span onclick="addEmoji('🙌')">🙌</span>
+                            <span onclick="addEmoji('👏')">👏</span>
+                            <span onclick="addEmoji('😇')">😇</span>
+                            <span onclick="addEmoji('😢')">😢</span>
+                            <span onclick="addEmoji('🥳')">🥳</span>
+                        </div>
+                        <div class="icon" onclick="toggleEmojiPicker()"><i class='bx bx-smile'></i></div>
+                        <div class="icon" onclick="sendMessage()"><i class='bx bx-send'></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
